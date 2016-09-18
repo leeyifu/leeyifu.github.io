@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Leeyifu&#39;s HomePage</title>
+  <title>Tag: 机器学习 | Leeyifu&#39;s HomePage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Leeyifu's HomePage">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/机器学习/index.html">
 <meta property="og:site_name" content="Leeyifu's HomePage">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leeyifu's HomePage">
@@ -134,115 +134,52 @@
       <div class="body-wrap">
         
   
-    <article id="post-模型评估与选择" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
+  
     
     
-      <header class="article-header">
-        
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/09/18/模型评估与选择/" class="archive-article-date">
+  	<time datetime="2016-09-18T12:23:05.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-18</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/18/模型评估与选择/">模型评估与选择</a>
+      <a class="archive-article-title" href="/2016/09/18/模型评估与选择/">模型评估与选择</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Problem："><a href="#Problem：" class="headerlink" title="Problem："></a>Problem：</h2><p>　　现实任务，往往存在多个方法、模型可解，那么该如何选择模型呢？<br>　　我们期望得到最小泛化误差的模型，但是我们无法直接得到泛化误差，then How？</p>
-<h2 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h2><p>　　如何估计泛化误差，我们可以取一个测试集，得到测试误差来作为对泛化误差的近似<br>　　现在我们有一个m个samples的数据集D，如何产生出训练集S与测试集T呢？</p>
-<h3 id="1-留出法（hold-out）"><a href="#1-留出法（hold-out）" class="headerlink" title="1. 留出法（hold-out）"></a>1. 留出法（hold-out）</h3><p>　　直接将 D 划分为两个互斥的集合 S 与 T，利用S训练，T测试，测试误差来作为对泛化误差的估计，注意划分时要尽可能保持数据分布的一致性。<br>　　由于划分的多样性与随机性，单次使用留出法得到的估计往往不够稳定可靠。因此在使用留出法时，往往采用若干次随机划分、重复实验评估后取平均值作为评估结果。<br>　　但是对 S 与 T 的比例问题，S 大的时候，评估结果方差大，容易过拟合， S小的时候，评估结果Bias大，容易欠拟合，此问题没有完美解决方案，一般取2/3到4/5作为 S<br>
-        <p class="article-more-link">
-          <a  href="/2016/09/18/模型评估与选择/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/18/模型评估与选择/" class="archive-article-date">
-  	<time datetime="2016-09-18T12:23:05.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-18</time>
-</a>
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
 	</div>
 
-      
+          
 
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
-
-
   
-    <article id="post-Spark-On-Yarn-浅析" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/18/Spark-On-Yarn-浅析/">Spark On Yarn 浅析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一直在搞spark，没有太细致地去理解机制就直接上去写代码，结果踩到诸多坑，觉得还是有必要对Spark进行一下稍微细致一些的探讨。</p>
-<hr>
-<h2 id="一、Spark与RDD"><a href="#一、Spark与RDD" class="headerlink" title="一、Spark与RDD"></a>一、Spark与RDD</h2><p>　　首先，Spark的核心是RDD（弹性分布式数据集， Resilient Distributed Dataset），也是Spark的最基本抽象， 它是一种有容错机制的特殊集合，可以分布在集群的节点上，以函数式编操作集合的方式，进行各种并行操作。可以将RDD理解为一个具有容错机制的特殊集合，它提供了一种只读、只能有已存在的RDD变换而来的共享内存，然后将所有数据都加载到内存中，方便进行多次重用.<br>　　a. 他是分布式的，可以分布在多台机器上，进行计算<br>　　b. 他是弹性的，计算过程中内错不够时它会和磁盘进行数据交换<br>　　c. 这些限制可以极大的降低自动容错开销<br>　　d. 实质是一种更为通用的迭代并行计算框架，用户可以显示的控制计算的中间结果，然后将其自由运用于之后的计算<br>　　我们可以将RDD理解为一个只读的，可分区的分布式数据集，这个数据集的全部或部分可以缓存在内存中，在多次计算间重用。RDD都是可序列化的，在内存不足时可自动降级为磁盘存储，把RDD存储于磁盘上，这时性能会有大的下降但不会差于现在的MapReduce。<br>　　传统的MapReduce编程模式虽然具有自动容错、平衡负载和可拓展性的优点，但是其最大缺点是采用非循环式的数据流模型，使得在迭代计算中要进行大量的磁盘IO操作。RDD正是解决这一缺点的抽象方法。<br>
-        <p class="article-more-link">
-          <a  href="/2016/09/18/Spark-On-Yarn-浅析/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/18/Spark-On-Yarn-浅析/" class="archive-article-date">
-  	<time datetime="2016-09-18T08:47:28.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-18</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-  
 
 
       </div>
@@ -264,10 +201,10 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/"

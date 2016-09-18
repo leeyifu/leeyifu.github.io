@@ -4,15 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>test | Leeyifu&#39;s HomePage</title>
+  <title>模型评估与选择 | Leeyifu&#39;s HomePage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2016/09/17/test/index.html">
+  <meta name="description" content="Problem：　　现实任务，往往存在多个方法、模型可解，那么该如何选择模型呢？　　我们期望得到最小泛化误差的模型，但是我们无法直接得到泛化误差，then How？
+评估方法　　如何估计泛化误差，我们可以取一个测试集，得到测试误差来作为对泛化误差的近似　　现在我们有一个m个samples的数据集D，如何产生出训练集S与测试集T呢？
+1. 留出法（hold-out）　　直接将 D 划分为两个互斥的集">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模型评估与选择">
+<meta property="og:url" content="http://yoursite.com/2016/09/18/模型评估与选择/index.html">
 <meta property="og:site_name" content="Leeyifu's HomePage">
-<meta property="og:updated_time" content="2016-09-17T15:38:06.000Z">
+<meta property="og:description" content="Problem：　　现实任务，往往存在多个方法、模型可解，那么该如何选择模型呢？　　我们期望得到最小泛化误差的模型，但是我们无法直接得到泛化误差，then How？
+评估方法　　如何估计泛化误差，我们可以取一个测试集，得到测试误差来作为对泛化误差的近似　　现在我们有一个m个samples的数据集D，如何产生出训练集S与测试集T呢？
+1. 留出法（hold-out）　　直接将 D 划分为两个互斥的集">
+<meta property="og:updated_time" content="2016-09-18T13:02:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
+<meta name="twitter:title" content="模型评估与选择">
+<meta name="twitter:description" content="Problem：　　现实任务，往往存在多个方法、模型可解，那么该如何选择模型呢？　　我们期望得到最小泛化误差的模型，但是我们无法直接得到泛化误差，then How？
+评估方法　　如何估计泛化误差，我们可以取一个测试集，得到测试误差来作为对泛化误差的近似　　现在我们有一个m个samples的数据集D，如何产生出训练集S与测试集T呢？
+1. 留出法（hold-out）　　直接将 D 划分为两个互斥的集">
   
     <link rel="alternative" href="/atom.xml" title="Leeyifu&#39;s HomePage" type="application/atom+xml">
   
@@ -30,7 +39,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img src="/imgs/kawayi.jpeg" class="js-avatar">
+			<img src="/imgs/touxiang.jpeg" class="js-avatar">
 			
 		</a>
 
@@ -97,7 +106,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 				
-					<img src="/imgs/kawayi.jpeg" class="js-avatar">
+					<img src="/imgs/touxiang.jpeg" class="js-avatar">
 				
 			</div>
 			<hgroup>
@@ -133,7 +142,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-模型评估与选择" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -143,7 +152,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      test
+      模型评估与选择
     </h1>
   
 
@@ -151,15 +160,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="Problem："><a href="#Problem：" class="headerlink" title="Problem："></a>Problem：</h2><p>　　现实任务，往往存在多个方法、模型可解，那么该如何选择模型呢？<br>　　我们期望得到最小泛化误差的模型，但是我们无法直接得到泛化误差，then How？</p>
+<h2 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h2><p>　　如何估计泛化误差，我们可以取一个测试集，得到测试误差来作为对泛化误差的近似<br>　　现在我们有一个m个samples的数据集D，如何产生出训练集S与测试集T呢？</p>
+<h3 id="1-留出法（hold-out）"><a href="#1-留出法（hold-out）" class="headerlink" title="1. 留出法（hold-out）"></a>1. 留出法（hold-out）</h3><p>　　直接将 D 划分为两个互斥的集合 S 与 T，利用S训练，T测试，测试误差来作为对泛化误差的估计，注意划分时要尽可能保持数据分布的一致性。<br>　　由于划分的多样性与随机性，单次使用留出法得到的估计往往不够稳定可靠。因此在使用留出法时，往往采用若干次随机划分、重复实验评估后取平均值作为评估结果。<br>　　但是对 S 与 T 的比例问题，S 大的时候，评估结果方差大，容易过拟合， S小的时候，评估结果Bias大，容易欠拟合，此问题没有完美解决方案，一般取2/3到4/5作为 S<br><a id="more"></a></p>
+<h3 id="2-交叉验证（cross-validation）"><a href="#2-交叉验证（cross-validation）" class="headerlink" title="2. 交叉验证（cross validation）"></a>2. 交叉验证（cross validation）</h3><p>　　将 D 划分为 K 个大小相似的互斥子集，尽可能保持数据分布一致性<br>每次取其中 k-1 个子集作为 S ，余下的一个子集作为 T，于是有了 K 组 S/T，进行 K 次训练与测试<br>　　取 K 次测试的测试误差均值作为评估，我们叫做 K-fold cross validation，K折交叉验证<br>　　交叉验证的评估结果的稳定性与保真性很大程度取决于 K，与留出法一样，划分 K 个子集也存在多种划分，要随机使用不同的划分重复 p 次<br>留一法：k = m</p>
+<h3 id="3-自助法（Bootstrapping）"><a href="#3-自助法（Bootstrapping）" class="headerlink" title="3. 自助法（Bootstrapping）"></a>3. 自助法（Bootstrapping）</h3><p>　　上面两个方法实际评估的模型使用的训练集比 D 小，会引入一些由于训练样本规模不同导致的估计偏差。<br>　　所以有自助法，直接以“自助采样法”为基础，又称为“可重复采样”、“有放回采样”，RF中就有使用。<br>　　从D中有放回的随机取m个样本作为训练集 S ，样本在m次采样中始终不被采到的概率是<br>　　所以D中月36.8%的样本未出现在 S 中，作为Ｔ，这样的评估叫做“包外估计”（out-of-bag estimate）<br>　　数据量小的时候比较有效，且产生多个不同的训练集，有利于集成学习，但由于它改变了初始数据集的分布，引入了估计偏差，所以数据量充足时不用</p>
+<h3 id="4-参数与最终模型"><a href="#4-参数与最终模型" class="headerlink" title="4. 参数与最终模型"></a>4. 参数与最终模型</h3><p>　　参数分为两类：<br>　　1. 算法的“参数”，我们成为超参数，数目常在10以内，认为设定候选值后产生模型，比如神经网络层数与神经元的数目<br>　　2. 模型的参数</p>
+<p>　　对于给定数据集，我们会分为S与T，T我们称为“验证集合”来与模型实际使用遇到的数据（称为测试集）来区分。<br>　　在模型选择完成后，学习算法与参数配置已经选定，此时我们返回、提交的最终模型应该是用完整的数据集 D 重新训练的模型。</p>
+
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/17/test/" class="archive-article-date">
-  	<time datetime="2016-09-17T15:38:05.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-17</time>
+      <a href="/2016/09/18/模型评估与选择/" class="archive-article-date">
+  	<time datetime="2016-09-18T12:23:05.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-18</time>
 </a>
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li></ul>
+	</div>
+
       
 
       <div class="clearfix"></div>
@@ -171,8 +192,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2016/09/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2016/09/18/Spark-On-Yarn-浅析/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spark On Yarn 浅析</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -286,7 +307,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				
+    				<a href="/tags/大数据/" style="font-size: 10px;">大数据</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a>
     			</div>
     	</section>
     
